@@ -8,7 +8,7 @@ import '../auth/auth_state.dart';
 
 class SignInMobile extends StatelessWidget {
   String name ;
-  SignInMobile({Key? key, this.name = ""}) : super(key: key);
+  SignInMobile({Key? key, this.name = "Phone Number"}) : super(key: key);
 
 
 
@@ -31,7 +31,7 @@ class SignInMobile extends StatelessWidget {
 
 class SignInMob extends StatelessWidget {
   String name;
-  SignInMob({Key? key, this.name = "Phone Number"});
+  SignInMob({Key? key, this.name = ""});
 
   TextEditingController phoneController = TextEditingController();
 
