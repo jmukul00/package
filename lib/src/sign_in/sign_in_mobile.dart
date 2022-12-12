@@ -11,13 +11,17 @@ class SignInMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BlocProvider<AuthCubit>(
+    return BlocProvider(
         create: (context) =>
-           AuthCubit(),
-        child: SignInMob()
-      )
-    );
+            AuthCubit(),
+        child: MaterialApp(
+          home: BlocBuilder<AuthCubit,AuthState>(
+            builder: (context, state){
+              return SignInMob();
+            },
+          ),
+        )
+    )
   }
 }
 
