@@ -15,7 +15,7 @@ class SignInMobile extends StatelessWidget {
       home: BlocProvider<AuthCubit>(
         create: (context) =>
            AuthCubit(),
-        child: SignInMobile()
+        child: SignInMob()
       )
     );
   }
