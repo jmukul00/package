@@ -7,6 +7,22 @@ import '../auth/auth_cubit.dart';
 import '../auth/auth_state.dart';
 
 class SignInMobile extends StatelessWidget {
+  const SignInMobile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BlocProvider<AuthCubit>(
+        create: (context) =>
+           AuthCubit(),
+        child: SignInMobile()
+      )
+    );
+  }
+}
+
+
+class SignInMob extends StatelessWidget {
 
   TextEditingController phoneController = TextEditingController();
 
@@ -61,7 +77,7 @@ class SignInMobile extends StatelessWidget {
                       BlocProvider.of<AuthCubit>(context).sendOTP(phoneNumber);
                     },
                     color: Colors.blue,
-                    child: Text("Sign In"),
+                    child: const Text("Sign In"),
                   ),
                 );
 
