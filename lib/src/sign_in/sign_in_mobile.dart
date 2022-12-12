@@ -7,7 +7,7 @@ import '../auth/auth_cubit.dart';
 import '../auth/auth_state.dart';
 
 class SignInMobile extends StatelessWidget {
-  String name ;
+  String name = "Phone Number" ;
   SignInMobile({Key? key, this.name = "Phone Number"}) : super(key: key);
 
 
