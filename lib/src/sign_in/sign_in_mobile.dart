@@ -7,10 +7,10 @@ import '../auth/auth_cubit.dart';
 import '../auth/auth_state.dart';
 
 class SignInMobile extends StatelessWidget {
-  String name = "Phone Number" ;
+
   SignInMobile({Key? key, this.name = "Phone Number"}) : super(key: key);
 
-
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SignInMobile extends StatelessWidget {
         child: MaterialApp(
           home: BlocBuilder<AuthCubit,AuthState>(
             builder: (context, state){
-              return SignInMob(name: name,);
+              return SignInMob(name: name);
             },
           ),
         )
@@ -30,9 +30,9 @@ class SignInMobile extends StatelessWidget {
 
 
 class SignInMob extends StatelessWidget {
-  String name;
-  SignInMob({Key? key, this.name = ""});
 
+  SignInMob({Key? key, this.name = ""});
+  final String name;
   TextEditingController phoneController = TextEditingController();
 
   @override
